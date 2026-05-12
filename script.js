@@ -183,3 +183,24 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open(videoLinks[index], '_blank');
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const homeToggle = document.getElementById("homeDropdown");
+    const homeMenu = homeToggle.nextElementSibling; // submenu-list
+
+    if (homeToggle) {
+        homeToggle.addEventListener("click", function(e) {
+            // Mobile toggle logic
+            if (window.innerWidth < 992) {
+                e.preventDefault(); // Page reload rokne ke liye
+                homeMenu.classList.toggle("show");
+            }
+        });
+    }
+
+    // Bahar click karne par menu close ho jaye
+    window.addEventListener("click", function(e) {
+        if (!homeToggle.contains(e.target)) {
+            homeMenu.classList.remove("show");
+        }
+    });
+});
