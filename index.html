@@ -31,12 +31,28 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navMenu">
       <ul class="navbar-nav gap-lg-4">
-        <li class="nav-item"><a class="nav-link active" href="#home" data-section="home">HOME</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services" data-section="services">SERVICES</a></li>
-        <li class="nav-item"><a class="nav-link" href="#solutions" data-section="solutions">SOLUTIONS</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact" data-section="contact">CONTACT</a></li>
+    
+    <!-- HOME Tab with Submenu -->
+        <li class="nav-item dropdown">
+           <a class="nav-link active dropdown-toggle" href="#home" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             HOME <span class="arrow">›</span>
+           </a>
+           <ul class="submenu-list">
+             <li><a href="#">ÜBERBLICK LÖSUNGEN <span class="side-arrow">›</span></a></li>
+             <li><a href="#">ARCHITEKTUR & BIM <span class="side-arrow">›</span></a></li>
+        <li><a href="#">PRODUKT-ENTWICKLUNG MIT CAD <span class="side-arrow">›</span></a></li>
+        <li><a href="#">FERTIGUNG MIT CAM <span class="side-arrow">›</span></a></li>
+        <li><a href="#">PRODUCT LIFECYCLE MANAGEMENT <span class="side-arrow">›</span></a></li>
+        <li><a href="#">DIGITALE FABRIKPLANUNG <span class="side-arrow">›</span></a></li>
       </ul>
-    </div>
+    </li>
+
+    <li class="nav-item"><a class="nav-link" href="#services" data-section="services">SERVICES</a></li>
+    <li class="nav-item"><a class="nav-link" href="#solutions" data-section="solutions">SOLUTIONS</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contact" data-section="contact">CONTACT</a></li>
+  </ul>
+</div>
+
   </div>
 </nav>
 
