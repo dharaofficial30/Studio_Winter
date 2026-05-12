@@ -1821,3 +1821,80 @@ body {
 @media (max-width: 480px) {
     .footer-top { grid-template-columns: 1fr; } 
 }
+/* Container for dropdown */
+.nav-item.dropdown {
+    position: relative;
+}
+
+/* Submenu Styling - Image jaisa clean look */
+.submenu-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 280px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    display: none; /* Default hidden */
+    z-index: 1050;
+}
+
+/* Submenu items list */
+.submenu-list li {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.submenu-list li:last-child {
+    border-bottom: none;
+}
+
+.submenu-list li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #444;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+/* Hover effects */
+.submenu-list li a:hover {
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+.arrow, .side-arrow {
+    margin-left: 8px;
+    font-size: 16px;
+    color: #999;
+}
+
+/* Desktop: Show on Hover */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .submenu-list {
+        display: block;
+    }
+}
+
+/* Mobile: Full width and Toggle */
+@media (max-width: 991px) {
+    .submenu-list {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        padding-left: 20px;
+        display: none;
+    }
+    .submenu-list.show {
+        display: block;
+    }
+}
